@@ -33,4 +33,14 @@ public class GifRepository {
         }
         return favouritesGis;
     }
+
+    public static List<Gif> getAllId(int id){
+        List<Gif> categoryGifs = new ArrayList<>();
+        for (Gif value: ALL_GIFT){
+            if (value.getCategoryId() == id){
+                categoryGifs.add(value);
+            }
+        }
+        return categoryGifs;
+    }
 }
